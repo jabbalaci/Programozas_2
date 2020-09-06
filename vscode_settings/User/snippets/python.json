@@ -1,0 +1,17 @@
+{
+    "alap": {
+        "prefix": "alap",
+        "body": [
+            "#!/usr/bin/env python3",
+            "",
+            "def main():",
+            "    print(\"$0Py3\")",
+            "",
+            "##############################################################################",
+            "",
+            "if __name__ == \"__main__\":",
+            "    main()"
+        ],
+        "description": "basic Python 3 skeleton"
+    }
+}
