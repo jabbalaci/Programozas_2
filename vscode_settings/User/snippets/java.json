@@ -28,8 +28,7 @@
 	"sout": {
 		"prefix": "sout",
 		"body": [
-			"System.out.println($0);",
-			""
+			"System.out.println($0);"
 		],
 		"description": "System.out.println"
 	}
