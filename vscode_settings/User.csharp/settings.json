@@ -1,0 +1,93 @@
+{
+    "editor.codeLens": false,
+	"workbench.colorTheme": "Default Light+",
+    "workbench.colorCustomizations": {
+        "editor.background": "#fcf5e3",
+        "sideBar.background": "#f9edcd"
+    },
+    "window.zoomLevel": 1,
+    "customWindowZoom.zoomLevelChangeValue": 0.2,    // ctrl+8, ctrl+9
+    "editor.fontSize": 16,
+    "fontshortcuts.step": 2,
+    "editor.fontFamily": "Hack, Consolas, 'Courier New', monospace",
+    "terminal.integrated.fontFamily": "Hack",
+    "code-runner.clearPreviousOutput": true,
+    "code-runner.showExecutionMessage": false,
+    // "code-runner.runInTerminal": true,
+    "workbench.iconTheme": "material-icon-theme",
+    "trailing-spaces.trimOnSave": true,
+    "files.insertFinalNewline": true,
+    "files.trimFinalNewlines": true,
+    "editor.roundedSelection": false,
+    "files.exclude": {
+        "**/.git/": true,
+        ".idea/": true,
+        ".dart_tool/": true,
+        ".vscode/": true,
+        "**/.gradle/": true,
+        "**/__pycache__/": true,
+        "**/**/*.pyc": true,
+        "**/.classpath": true,
+        "**/.project": true,
+        "**/.settings": true,
+        "**/.factorypath": true,
+        "**/**/*.class": true,
+    },
+    "editor.rulers": [
+        100
+    ],
+    "macros": {
+        "commentLine": [
+            "editor.action.commentLine",
+            "cursorDown"
+        ]
+    },
+    "editor.multiCursorModifier": "ctrlCmd",
+    "workbench.startupEditor": "newUntitledFile",
+    "editor.renderControlCharacters": false,
+    "C_Cpp.updateChannel": "Insiders",
+    "explorer.confirmDelete": true,
+    "dart.checkForSdkUpdates": false,
+    "tabnine.experimentalAutoImports": true,
+    "editor.renderWhitespace": "none",
+    "[nim]": {
+        "editor.renderWhitespace": "boundary",
+    },
+    "d.servedPath": "/home/jabba/.local/share/code-d/bin/serve-d",
+    "editor.suggestSelection": "first",
+    "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
+    "java.semanticHighlighting.enabled": true,
+    "python.languageServer": "Pylance",
+    "[dart]": {
+        "editor.formatOnSave": true,
+        "editor.formatOnType": true,
+        "editor.rulers": [
+            80
+        ],
+        "editor.selectionHighlight": false,
+        "editor.suggest.snippetsPreventQuickSuggestions": false,
+        "editor.suggestSelection": "first",
+        "editor.tabCompletion": "onlySnippets",
+        "editor.wordBasedSuggestions": false
+    },
+    "vsicons.dontShowNewVersionMessage": true,
+    "code-runner.executorMap": {
+        "csharp": "dotnet run",
+    },
+    "editor.lineHeight": 0,
+    "python.showStartPage": false,
+    "latex-workshop.message.update.show": false,
+    "go.alternateTools": {
+        "go": "/snap/go/current/bin/go"
+    },
+    "go.formatTool": "gof*",
+    "workbench.tree.indent": 12,
+    "workbench.tree.renderIndentGuides": "always",
+    "java.refactor.renameFromFileExplorer": "autoApply",
+    "workbench.editorAssociations": [
+        {
+            "viewType": "jupyter.notebook.ipynb",
+            "filenamePattern": "*.ipynb"
+        }
+    ],
+}

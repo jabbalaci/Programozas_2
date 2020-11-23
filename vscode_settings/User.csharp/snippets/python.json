@@ -1,0 +1,45 @@
+{
+    "alap": {
+        "prefix": "alap",
+        "body": [
+            "#!/usr/bin/env python3",
+            "",
+            "def main():",
+            "    print(\"$0Py3\")",
+            "",
+            "##############################################################################",
+            "",
+            "if __name__ == \"__main__\":",
+            "    main()"
+        ],
+        "description": "basic Python 3 skeleton"
+    },
+    "shebang": {
+        "prefix": "shebang",
+        "body": [
+            "#!/usr/bin/env python3"
+        ],
+        "description": "shebang for Python 3"
+    },
+    "turtle": {
+        "prefix": "turtle",
+        "body": [
+            "#!/usr/bin/env python3",
+            "",
+            "import turtle",
+            "",
+            "t = turtle.Turtle()",
+            "t.shape(\"turtle\")",
+            "",
+            "#############################################################################",
+            "",
+            "$0",
+            "",
+            "#############################################################################",
+            "",
+            "turtle.done()",
+            ""
+          ],
+        "description": "basic Python 3 skeleton"
+    },
+}
