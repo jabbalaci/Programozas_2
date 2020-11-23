@@ -5,10 +5,23 @@
 C# fejlesztés
 -------------
 
-    $ sudo snap install dotnet-sdk --classic
-    $ sudo apt install nuget
-    $ sudo snap install rider --classic
-    $ sudo apt install mono-csharp-shell
+.NET Core 3.1 (LTS) telepítése
+
+  $ wget https://packages.microsoft.com/config/ubuntu/20.04/packages-microsoft-prod.deb
+  $ sudo dpkg -i packages-microsoft-prod.deb
+  $ sudo apt update
+  $ sudo apt install apt-transport-https
+  $ sudo apt install dotnet-sdk-3.1
+
+.NET 5 telepítése
+
+  $ sudo snap install dotnet-sdk --classic
+
+Egyéb
+
+  $ sudo apt install nuget
+  $ sudo snap install rider --classic
+  $ sudo apt install mono-csharp-shell
 
 
 **************
