@@ -1,0 +1,31 @@
+************************
+* Linux (Ubuntu 20.04) *
+************************
+
+Java fejlesztés
+---------------
+
+    $ sudo apt install openjdk-11-jdk-headless
+    $ sudo snap install intellij-idea-community --classic
+    $ sudo snap install eclipse --classic                     # opcionális
+    $ sudo snap install netbeans --classic                    # opcionális
+
+
+**************
+* Windows 10 *
+**************
+
+Java fejlesztés
+---------------
+
+* Java SDK 11 (LTS)
+  https://www.azul.com/downloads/zulu-community/?version=java-11-lts&os=windows&architecture=x86-64-bit&package=jdk
+  .msi változat telepítése
+  Telepítés utáni ellenőrzés:
+  - cmd indítása
+  - `java -version` parancs kiadása
+  - `javac -version` parancs kiadása
+* Jetbrains IntelliJ IDEA telepítése
+  https://www.jetbrains.com/idea/ , community edition
+* Eclipse telepítése                                        # opcionális
+* Netbeans telepítése                                       # opcionális

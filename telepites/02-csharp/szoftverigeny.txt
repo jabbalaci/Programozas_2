@@ -1,0 +1,34 @@
+************************
+* Linux (Ubuntu 20.04) *
+************************
+
+C# fejlesztés
+-------------
+
+    $ sudo snap install dotnet-sdk --classic
+    $ sudo apt install nuget
+    $ sudo snap install rider --classic
+    $ sudo apt install mono-csharp-shell
+
+
+**************
+* Windows 10 *
+**************
+
+C# fejlesztés
+-------------
+
+* .NET Core 3.1 (LTS)
+  https://dotnet.microsoft.com/download
+  .NET Core SDK (build apps) telepítése
+  Telepítés utáni ellenőrzés:
+  - cmd indítása
+  - `dotnet` parancs kiadása
+* nuget csomagkezelő
+  https://www.nuget.org/downloads , Windows x86 Commandline, recommended latest letöltése
+  ez egy EXE file (nuget.exe), amit tegyünk be egy olyan helyre, ami szerepel a PATH-ban
+  például a dotnet.exe mellé ide: `C:\Program files\dotnet\nuget.exe` helyre
+* Jetbrains Rider IDE telepítése
+  https://www.jetbrains.com/rider/ , 30-day trial verzió
+* Visual Studio 2019 CE telepítése
+  a telepítés során a .NET Core rész kell (a telepítőben a jobb alsó sarokban szerepel)
