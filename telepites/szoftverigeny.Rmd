@@ -1,0 +1,124 @@
+---
+output: pdf_document
+date: "Aug. 24, 2022"
+---
+
+
+Linux (Ubuntu 20.04)
+====================
+
+általános
+---------
+
+    $ sudo apt install mc konsole tmux gedit htop neovim firefox
+    $ sudo snap install code --classic
+
+Python fejlesztés
+-----------------
+
+    $ sudo apt install python3-pip
+    $ sudo snap install pycharm-community --classic
+
+NoSQL
+-----
+
+    $ sudo apt install mongodb-server mongodb-clients
+    $ sudo apt install redis
+    $ sudo snap install redis-desktop-manager
+
+C fejlesztés
+------------
+
+    $ sudo apt install build-essential
+    $ sudo apt install gcc clang
+    $ sudo snap install valgrind --classic
+
+C# fejlesztés
+-------------
+
+    $ sudo snap install dotnet-sdk --classic
+
+Ellenőrzés:
+
+    $ dotnet --version
+
+    $ sudo apt install nuget
+    $ sudo snap install rider --classic
+    $ sudo apt install mono-csharp-shell
+
+Java fejlesztés
+---------------
+
+    $ sudo apt install openjdk-17-jdk-headless
+    $ sudo snap install intellij-idea-community --classic
+    $ sudo snap install eclipse --classic
+
+Egy kis tisztogatás a végére
+----------------------------
+
+    $ sudo apt autoremove
+
+
+\clearpage
+Windows 10
+==========
+
+általános
+---------
+
+* Firefox
+* Visual Studio Code
+  https://code.visualstudio.com/Download
+  innen a 64 bites verziót tegyük fel
+* Total Commander
+  https://www.ghisler.com/
+  Download -> 64 bit version only
+
+C fejlesztés
+------------
+
+* A https://nuwen.net/mingw.html oldalon töltsük le a mingw-18.0.exe -t.
+  Direkt link: https://nuwen.net/files/mingw/mingw-18.0.exe
+* Futtassuk és telepítsük pl. a `C:\tmp` könyvtárba.
+* A `C:\tmp\MinGW` mappát mozgassuk át a `C:\MinGW` mappába.
+* A `C:\MinGW\bin` könyvtárat adjuk hozzá a PATH-hoz.
+
+C# fejlesztés
+-------------
+
+* .NET 6.0
+  https://dotnet.microsoft.com/download
+  .NET SDK x64 telepítése
+  Telepítés utáni ellenőrzés:
+  - cmd indítása
+  - `dotnet` parancs kiadása
+* nuget csomagkezelő
+  https://www.nuget.org/downloads , Windows x86 Commandline, recommended latest letöltése
+  ez egy EXE file (nuget.exe), amit tegyünk be egy olyan helyre, ami szerepel a PATH-ban
+  például a dotnet.exe mellé ide: `C:\Program files\dotnet\nuget.exe` helyre
+* Jetbrains Rider IDE telepítése
+  https://www.jetbrains.com/rider/ , 30-day trial verzió
+* Visual Studio Community telepítése
+  - https://visualstudio.microsoft.com/free-developer-offers/
+  - Visual Studio Community letöltése, telepítése
+  - a telepítés során a ".NET desktop development" rész kell
+
+Java fejlesztés
+---------------
+
+* Java SDK 17 (LTS)
+  https://www.azul.com/downloads/?version=java-17-lts&os=windows&architecture=x86-64-bit&package=jdk
+  Itt menjünk le az oldal legaljára.
+  .msi változat telepítése
+  Telepítés utáni ellenőrzés:
+  - cmd indítása
+  - `java -version` parancs kiadása
+  - `javac -version` parancs kiadása
+* Jetbrains IntelliJ IDEA telepítése
+  https://www.jetbrains.com/idea/ , Community Edition
+* Eclipse telepítése
+
+Python fejlesztés
+-----------------
+* Jetbrains PyCharm telepítése
+  https://www.jetbrains.com/pycharm/ , Community Edition
