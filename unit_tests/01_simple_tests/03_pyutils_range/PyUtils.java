@@ -14,13 +14,11 @@ public class PyUtils
         return result;
     }
 
-    public static List<Integer> range(int start, int end)
-    {
+    public static List<Integer> range(int start, int end) {
         return PyUtils.range(start, end, 1);
     }
 
-    public static List<Integer> range(int end)
-    {
+    public static List<Integer> range(int end) {
         return PyUtils.range(0, end);
     }
 }

@@ -5,13 +5,11 @@ public class MyUtils
         // everything is static in this class
     }
 
-    public static int duplaz(int n)
-    {
+    public static int duplaz(int n) {
         return 2 * n;
     }
 
-    public static int strlen(String s)
-    {
+    public static int strlen(String s) {
         return s.length();
     }
 }

@@ -16,9 +16,9 @@ public class Verem
         for (int e : elems) {
             this.append(e);
         }
-	}
+    }
 
-	public int size() {
+    public int size() {
         return this.szamok.size();
     }
 
@@ -34,8 +34,7 @@ public class Verem
         return this.szamok.remove(this.szamok.size() - 1);
     }
 
-    public String toString()
-    {
+    public String toString() {
         return this.szamok.toString().replace("]", "");
     }
 }
