@@ -1,4 +1,4 @@
 Szoftverigény
 =============
 
-Kapcsolódó videó: https://www.youtube.com/watch?v=scoVzbb5Jgo
+Kapcsolódó videók: https://www.youtube.com/playlist?list=PL6ubK4uhF2NVBb4CDs59impPSRSjcxk8d
