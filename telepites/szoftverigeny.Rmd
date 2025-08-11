@@ -1,14 +1,27 @@
-Utolsó frissítés: 2024. júl. 10.
+---
+output: pdf_document
+geometry:
+- top=0.75in
+- bottom=0.75in
+- left=0.75in
+- right=0.75in
+---
 
-# Linux Mint 21.3 (Cinnamon)
+Utolsó frissítés: 2025. júl. 28.
 
-https://www.linuxmint.com/edition.php?id=311
+# Linux Mint 22.1 (Cinnamon)
+
+https://www.linuxmint.com/edition.php?id=319
 
 ## általános
 
-    $ sudo apt install mc konsole tmux gedit htop git neovim micro firefox
+    $ sudo apt install mc konsole tmux gedit htop git neovim micro firefox xsel xclip pipx
 
-## clipman
+    $ sudo apt install qttools5-dev-tools qttools5-dev pyqt5-dev-tools
+
+    $ sudo apt install zsh fish
+
+    $ sudo apt install datamash
 
     $ sudo apt install xfce4-clipman
 
@@ -36,7 +49,9 @@ ahol kiléptünk.)
 
 ## Python 3
 
-    $ sudo apt install python3-pip
+    $ sudo apt install python3-pip pipx
+
+    $ pipx install uv
 
 ### PyCharm IDE
 
@@ -47,20 +62,21 @@ megfelelő helyre (pl. a `/opt` mappába).
 Nekem elegendő a Community Edition, de ha valaki a Professional Edition-t kéri,
 akkor elegendő csak a Professional Edition-t feltenni.
 
+\clearpage
 ## C fejlesztés
 
     $ sudo apt install build-essential
-    $ sudo apt install gcc clang
-    $ sudo apt install valgrind
+    $ sudo apt install gcc clang valgrind
 
 ### style50
 
     $ sudo apt install astyle
-    $ pip3 install style50 --user -U
+    $ sudo apt install pipx
+    $ pipx install style50
 
-Utána a PATH-t bővítsük ki:
+Utána a PATH-t bővítsük ki. A `~/.bashrc` végére szúrjuk be:
 
-    $ export PATH=$PATH:$HOME/.local/bin
+    export PATH=$PATH:$HOME/.local/bin
 
 ## Java fejlesztés
 
@@ -85,7 +101,6 @@ Ellenőrzés:
 
     $ dotnet --version
 
-    $ sudo apt install nuget
     $ sudo apt install mono-csharp-shell
 
 ### Rider IDE
@@ -93,29 +108,17 @@ Ellenőrzés:
 Látogassuk meg a `https://www.jetbrains.com/rider/download/#section=linux` oldalt.
 Töltsük le, majd bontsuk ki egy megfelelő helyre (pl. a `/opt` mappába).
 
-NE indítsuk el, ui. az első indítás után csak 30 napig használható.
-
 ## Lua
 
     $ sudo apt install lua5.4
-
-## Go
-
-    $ sudo apt install golang-1.22
-
-Majd bővítsük a `~/.bashrc` végét:
-
-    export PATH=$PATH:/usr/lib/go-1.22/bin
-    export GOPATH="$HOME/go"
-    export PATH=$PATH:$GOPATH/bin
 
 ## D Lang.
 
 lásd https://dlang.org/download.html
 
-    $ wget https://downloads.dlang.org/releases/2.x/2.109.1/dmd_2.109.1-0_amd64.deb
-    $ sudo dpkg -i dmd_2.109.1-0_amd64.deb
-    $ rm dmd_2.109.1-0_amd64.deb
+    $ wget https://downloads.dlang.org/releases/2.x/2.111.0/dmd_2.111.0-0_amd64.deb
+    $ sudo dpkg -i dmd_2.111.0-0_amd64.deb
+    $ rm dmd_2.111.0-0_amd64.deb
 
 dfmt telepítése (lásd https://github.com/dlang-community/dfmt):
 
@@ -123,36 +126,31 @@ dfmt telepítése (lásd https://github.com/dlang-community/dfmt):
 
 Utána a PATH-t bővítsük ki:
 
-    $ export PATH=$PATH:$HOME/.dub/packages/dfmt/0.15.1/dfmt/bin
+    $ export PATH=$PATH:$HOME/.dub/packages/dfmt/0.15.2/dfmt/bin
 
-## NoSQL
+## Go
 
-### MongoDB:
+    $ sudo apt install golang-1.23
 
-Lásd https://www.mongodb.com/docs/manual/tutorial/install-mongodb-on-ubuntu/
+Majd bővítsük a `~/.bashrc` végét:
 
-    $ sudo apt-get install gnupg curl
-    $ curl -fsSL https://www.mongodb.org/static/pgp/server-7.0.asc | sudo gpg -o /usr/share/keyrings/mongodb-server-7.0.gpg --dearmor
-    $ echo "deb [ arch=amd64,arm64 signed-by=/usr/share/keyrings/mongodb-server-7.0.gpg ] https://repo.mongodb.org/apt/ubuntu jammy/mongodb-org/7.0 multiverse" | sudo tee /etc/apt/sources.list.d/mongodb-org-7.0.list
-    $ sudo apt-get update
-    $ sudo apt-get install -y mongodb-org
-    $ sudo systemctl enable mongod
-    $ sudo systemctl start mongod
+    export PATH=$PATH:/usr/lib/go-1.23/bin
+    export GOPATH="$HOME/go"
+    export PATH=$PATH:$GOPATH/bin
 
-Ellenőrzés:
+## MS Edit szövegszerkesztő
 
-    $ sudo systemctl status mongod
-    $ mongosh
+    * https://github.com/microsoft/edit/releases
+      töltsük le a legfrissebb verziót; ez jelenleg az 1.2.0-s:
+      $ wget https://github.com/microsoft/edit/releases/download/v1.2.0/edit-1.2.0-x86_64-linux-gnu.tar.zst
+    * bontsuk ki:
+      $ tar --zstd -xvf edit-1.2.0-x86_64-linux-gnu.tar.zst
+    * nevezzük át `msedit`-re (már van egy `edit` a `/usr/bin`-ben):
+      $ mv edit msedit
+    * az `msedit` nevű binárist tegyük be valahova, pl. a `/opt/edit` mappába
+    * majd bővítsük a PATH-t a `~/.bashrc` végén:
 
-### Redis:
-
-    $ sudo apt install redis
-
-Redis Insight telepítése:
-
-    - Software Manager indítása
-    - a "redis" kulcsszóra keressünk rá
-    - a Redis Insight csomagot telepítsük fel
+      export PATH=$PATH:/opt/edit
 
 ## Egy kis tisztogatás a végére
 
@@ -162,7 +160,7 @@ Redis Insight telepítése:
 
 -------------------------------------------------
 
-# Windows 10
+# Windows 11
 
 ## általános
 
@@ -180,10 +178,10 @@ Redis Insight telepítése:
   Downloads -> Windows fül
 * Stable Releases alatt Download Windows installer (64-bit)
   töltsük le, indítsuk el a telepítőt
-* add python.exe to PATH legyen bekapcsolva
+* "add python.exe to PATH" legyen bekapcsolva
   Customize Installation módban tegyük fel
-* Optional features alatt a pip legyen bekapcsolva
-* telepítés ajánlott helye: `C:\Python312`
+* Optional features alatt a `pip` legyen bekapcsolva
+* telepítés ajánlott helye: `C:\Python313`
 
 ## C fejlesztés
 
@@ -193,6 +191,7 @@ Redis Insight telepítése:
 * A `C:\tmp\MinGW` mappát mozgassuk át a `C:\MinGW` mappába.
 * A `C:\MinGW\bin` könyvtárat adjuk hozzá a PATH-hoz.
 
+\clearpage
 ## C# fejlesztés
 
 * .NET 8.0
@@ -202,12 +201,8 @@ Redis Insight telepítése:
   - cmd indítása
   - `dotnet` parancs kiadása
   - `dotnet --version` parancs kiadása
-* nuget csomagkezelő
-  https://www.nuget.org/downloads , Windows x86 Commandline, recommended latest letöltése
-  ez egy EXE file (nuget.exe), amit tegyünk be egy olyan helyre, ami szerepel a PATH-ban
-  például a dotnet.exe mellé ide: `C:\Program files\dotnet\nuget.exe` helyre
 * Jetbrains Rider IDE telepítése
-  https://www.jetbrains.com/rider/ , 30-day trial verzió
+  https://www.jetbrains.com/rider/
 
 ## Java fejlesztés
 
@@ -227,3 +222,9 @@ Redis Insight telepítése:
 * Jetbrains PyCharm telepítése
   https://www.jetbrains.com/pycharm/download/other.html
   itt: PyCharm Community Edition oszlop, Windows (exe) letöltése és telepítése
+
+## MS Edit szövegszerkesztő
+
+* a terminálban adjuk ki a köv. parancsot:
+
+  winget install Microsoft.Edit
