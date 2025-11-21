@@ -7,7 +7,7 @@ geometry:
 - right=0.75in
 ---
 
-Utolsó frissítés: 2025. júl. 28.
+Utolsó frissítés: 2025. nov. 21.
 
 # Linux Mint 22.1 (Cinnamon)
 
@@ -95,7 +95,7 @@ akkor elegendő csak az Ultimate Edition-t feltenni.
 
 Lásd https://learn.microsoft.com/en-us/dotnet/core/install/linux-ubuntu-install?pivots=os-linux-ubuntu-2204&tabs=dotnet8
 
-    $ sudo apt-get update && sudo apt-get install -y dotnet-sdk-8.0
+    $ sudo apt update && sudo apt install -y dotnet-sdk-8.0
 
 Ellenőrzés:
 
